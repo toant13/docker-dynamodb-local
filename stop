@@ -1,0 +1,4 @@
+#!/bin/bash
+
+IMAGE=$(docker ps | grep dynamodb | awk '{print $1}')
+docker rm -f ${IMAGE} 
