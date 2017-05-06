@@ -19,6 +19,6 @@ RUN add-apt-repository -y ppa:webupd8team/java &&  \
 
 # Get the package from Amazon
 RUN wget -O /tmp/dynamodb_local_latest https://s3-us-west-2.amazonaws.com/dynamodb-local/dynamodb_local_latest.tar.gz && \
-    tar -xvf /tmp/dynamodb_local_latest && \
+    tar -xvf /tmp/dynamodb_local_latest
 
 CMD java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
